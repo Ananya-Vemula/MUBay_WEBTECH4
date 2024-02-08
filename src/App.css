@@ -155,42 +155,226 @@ input {
 
 }
 
+
 .HeaderDesign {
-  display: flex;  /* Arrange elements horizontally */
-  justify-content: space-between; /* Distribute elements evenly */
-  align-items: center; /* Vertically align elements */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: #4B9CAB;
-  position: top;
-
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 70px; 
+  place-items: center;
 }
 
-.homeScreenTopButton {
-  margin: 0 10px;  /* Adjust spacing between buttons as needed */
-
+.homeScreenTopNotifButton {
+  z-index: 20; /* Higher than the search bar's z-index (if any) */
+  background: none;
+  border: none;
+  position:absolute;
+  left: 190px;
 }
 
-.homeScreenTopButtonAddress{
-  width: 300px; /* Adjust as needed */
-  height: 75px;
-  text-align: center;
-  text-size-adjust:none;
-  margin: 0 10px;
+.homeScreenTopButtonAddress {
+  /* Styles for the button containing the address */
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #fff; /* Text color */
+  text-align: left; /* Align text to the left */
+  cursor: pointer;
 }
 
-.homeScreenTopButtonImages {
-  /* Adjust image size and alignment as needed */
-  width: 75px;
-  height: 75px;
+.homeScreenTopButtonAddress text {
+  /* Styles for the text inside the address button */
+  font-weight: bold;
+}
+
+.searchContainerWrapper {
+  position: flex;
+  border: none;
+  width: 30%;
+  /* Adjust margin, padding, or order property to position it */
+}
+
+.searchContainerWrapper :focus {
+  outline: none;
+  
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchContainer input[type="text"] {
+  /* Styles for the search input */
+  width: 300px; /* Adjust the width as needed */
+  padding: 10px; /* Add padding to the input */
+  font-size: 16px;
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add border radius */
+  outline: none; /* Remove outline */
+  z-index: 1; /* Ensure it's above other content */
 }
 
 .searchResultsContainer {
-  display: none; /* Initially hidden */
-  margin-top: 10px; /* Adjust spacing as needed */
-  border: 1px solid #ccc;
-  padding: 10px;
-  background-color: #fff;
+  position: absolute; /* Position the search results absolutely */
+  top: calc(100% + 10px); /* Position below the input */
+  left: 0; /* Align with the left edge of the input */
+  width: 100%; /* Take full width */
+  background-color: #fff; /* Background color for the results */
+  border: 1px solid #ccc; /* Border */
+  border-top: none; /* Remove top border */
+  border-radius: 5px; /* Add border radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  z-index: 0; /* Lower z-index compared to the input */
+  display: none; /* Initially hide */
 }
 
-.searchResultsContainer.show { /* Add additional class when displaying */
-  display: block;
+
+
+
+.searchResultsContainer.show {
+  display: block; /* Show when results are available */
+}
+
+.user {
+  /* Styles for each search result */
+  padding: 10px; /* Add padding */
+  border-bottom: 1px solid #ccc; /* Add bottom border */
+}
+
+.user:last-child {
+  border-bottom: none; /* Remove bottom border for the last result */
+}
+
+.homeScreenTopButton {
+  /* Styles for the top buttons */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.homeScreenTopButtonImages {
+  /* Styles for the images inside the top buttons */
+  width: 50px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.HomeScreenQcontainer1 {
+  background-color: #84E4A8;
+  border-style: dashed;
+  border-color: black;
+  border-width: 0.2rem;
+  margin: 5%;
+  display: flex; /* Add display flex */
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  height: 4rem;
+  width: auto;
+  font-size: 1.5em;
+  text-decoration: solid;
+}
+
+.HomeScreenOptionsContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+
+
+}
+
+.BuyButton{
+  background-image: linear-gradient(180deg, #008380 , #b3e3e3);
+  height: 5rem;
+  width :5rem;
+  border-style: dashed;
+  border-color: black;
+  border-width: 0.2rem;
+  font-size: 20px;
+  cursor:pointer;
+}
+
+
+.SellButton{
+  
+  background-image: linear-gradient(180deg, #CBCB65 , #d2d3bd);
+  height: 5rem;
+  width :5rem;
+  border-style: dashed;
+  border-color: black;
+  border-width: 0.2rem;
+  font-size: 20px;
+  cursor:pointer;
+}
+
+
+.BusButton{
+  background-image: linear-gradient(180deg, #7F44F6 , #d2cdd7);
+  height: 5rem;
+  width :5rem;
+  border-style: dashed;
+  border-color: black;
+  border-width: 0.2rem;
+  font-size: 12px;
+  cursor:pointer;
+}
+
+.deliveryAddressContainer {
+  display: flex;
+  align-items: center;
+}
+
+.deliveryAddressText {
+  font-size: 14px; /* Adjust the font size as needed */
+  /*margin-right: 10px; Add some spacing between the text and the pointer */
+}
+
+.customMapPointer{
+  width: 30px; /* Adjust the width of the map pointer image */
+  height: auto;
+  cursor: pointer;
+ 
+}
+
+.mylogosetting1{
+  width: 60px; /* Adjust the width of the map pointer image */
+  height: auto;
+  justify-content: space-between;
+  gap: 5px;
+
+}
+
+.somename{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px; /* Adjust spacing between items */
+  /* Remove or adjust any unnecessary rules like .optionspic */
+}
+
+.buyexmp{
+  height: 70px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-gap: 10px; /* Adjust spacing between items */
+  /* Remove or adjust any unnecessary rules like .optionspic */
+}
+
+.optionspic{
+  height: 120px;
+  object-fit: cover;
+  cursor: pointer;
+
 }

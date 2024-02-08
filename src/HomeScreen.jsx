@@ -1,60 +1,38 @@
 import React, { useState } from "react";
-import JSONDATA from './HSSearchData.json';
-import ShoppingCartSymbol from './assets/ShoppingCartSymbol.png';
-import MyAccountPic from './assets/MyAccountPic.png';
 
-export const HomeScreen = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [hasSearched, setHasSearched] = useState(false);
-  const [isShowingResults, setIsShowingResults] = useState(false);
+export const HomeScreen = (props) => {
+
+  const handleBuyButtonClick = () => {
+    // Call the function passed as a prop to switch to BuyScreen1
+    props.onScreenSwitch('BuyScreen1');
+  };
+  
 
   return (
     <div>
-      <div className = 'HeaderDesign'>
+      
 
-        <button className = "homeScreenTopButtonAddress">
-          <text >
-            Deliver to Ananya<br/>
-            GHS B2 room 217
-          </text>
+      <div className="HomeScreenQcontainer1">
+        <text>
+          What would you like to do today?
+        </text>
+      </div>
+
+      <div className="HomeScreenOptionsContainer">
+        {/* Call handleBuyButtonClick when the "BUY" button is clicked */}
+        <button className="BuyButton" onClick={handleBuyButtonClick}>
+          BUY
         </button>
-
-        <input
-          type="text"
-          placeholder="Search..."
-          onChange={(event) => {
-            setSearchTerm(event.target.value);
-          }}
-          onClick={() => {setHasSearched(true);
-                          setIsShowingResults(true);}
-                        }
-        />
-        {hasSearched && (
-    <div className={`searchResultsContainer ${isShowingResults ? "show" : ""}`}>
-      {JSONDATA.map((val, index) => {
-        if (searchTerm === "" || val.toLowerCase().includes(searchTerm.toLowerCase())) {
-          return (
-            <div className="user" key={index}>
-              <p>{val}</p>
-            </div>
-          );
-        }
-        return null; // Handle cases where searchTerm doesn't match
-      })}
-    </div>
-  )}
-
-        <button className = "homeScreenTopButton" onCLick ={() => console.log("Button Clicked")}>
-          <img src={MyAccountPic} alt="ShoppingCart" className = "homeScreenTopButtonImages"/>
+        <button className="SellButton">
+          SELL
         </button>
-
-        <button className = "homeScreenTopButton" onCLick ={() => console.log("Button Clicked")}>
-          <img src={ShoppingCartSymbol} alt="ShoppingCart" className = "homeScreenTopButtonImages"/>
+        <button className="BusButton">
+          BUSINESS
         </button>
       </div>
-      
     </div>
   );
 };
 
 export default HomeScreen;
+
