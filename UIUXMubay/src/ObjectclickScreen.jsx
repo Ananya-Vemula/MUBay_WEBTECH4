@@ -91,9 +91,23 @@ export const ObjectclickScreen = (props) => {
             <div className="somename">
                 <button>
                     <img src={smily} alt="example1" className = "buyexmp"/>
-                </button>
+                </button> 
+                    <div className="iteminfotab">
+                        <p>
+                            Item: Electric Kettle with a broken tip 
+                        </p>   
+                        <p>
+                            Sold by: Ananya Vemula
+                        </p>
+                        <p>
+                            Cost: Rs. 200
+                        </p>
+
+                    </div>
+                
                 <button>
                     <img src={smily} alt="example1" className = "buyexmp"/>
+                    <p></p>
                 </button>
                 <button>
                     <img src={smily} alt="example1" className = "buyexmp"/>

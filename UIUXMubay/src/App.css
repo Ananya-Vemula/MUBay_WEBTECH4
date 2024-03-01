@@ -352,19 +352,29 @@ input {
 
 }
 
-.somename{
+.somename {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 10px; /* Adjust spacing between items */
-  /* Remove or adjust any unnecessary rules like .optionspic */
+  grid-template-columns: repeat(auto-fit, minmax(750px, 1fr));
+  grid-gap: 12px; /* Adjust spacing between items */
 }
 
-.buyexmp{
-  height: 70px;
-  object-fit: cover;
+.iteminfotab {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
+  margin-left: 10px;
+  background-color: white;
+}
+
+.buyexmp {
+  width: 70px; /* Set width instead of height */
+  height: auto; /* Auto height to maintain aspect ratio */
+  object-fit: contain; /* Ensure image fits within the container */
   cursor: pointer;
 }
 
+.iteminfotab p {
+  margin-left: 10px; /* Adjust spacing between image and text */
+}
 .productGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
