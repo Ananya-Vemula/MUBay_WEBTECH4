@@ -13,6 +13,12 @@ export const ObjectclickScreen = (props) => {
     const [hasSearched, setHasSearched] = useState(false);
     const [isShowingResults, setIsShowingResults] = useState(false);
 
+    const someItemClicked = () => {
+        props.onScreenSwitch('MoreObjInfoScreen');
+
+    };
+    
+
     return(
         <div>
 
@@ -89,49 +95,60 @@ export const ObjectclickScreen = (props) => {
                 <h2>Currently sold items:</h2>
             </text>
             <div className="somename">
-                <button>
-                    <img src={smily} alt="example1" className = "buyexmp"/>
-                </button> 
-                    <div className="iteminfotab">
-                        <p>
-                            Item: Electric Kettle with a broken tip 
-                        </p>   
-                        <p>
-                            Sold by: Ananya Vemula
-                        </p>
-                        <p>
-                            Cost: Rs. 200
-                        </p>
+                <div className="item-container">
+                    <button onClick={someItemClicked}>
+                        <img src={smily} alt="example1" className = "buyexmp"/>
+                    </button> 
+                        <div className="iteminfotab">
+                            <p>
+                                Item: Electric Kettle with a broken tip 
+                            </p>   
+                            <p>
+                                Sold by: Ananya Vemula
+                            </p>
+                            <p>
+                                Cost: Rs. 200
+                            </p>
 
-                    </div>
+                        </div>
+                </div>
+                <div className="item-container">
+                    <button onClick={someItemClicked}>
+                        <img src={smily} alt="example1" className = "buyexmp"/>
+                    </button> 
+                        <div className="iteminfotab">
+                            <p>
+                                Item: Gold Kettle with a scratch
+                            </p>   
+                            <p>
+                                Sold by: Prisha Anand
+                            </p>
+                            <p>
+                                Cost: Rs. 4000
+                            </p>
+
+                        </div>
+                </div>
+                <div className="item-container">
+                    <button onClick={someItemClicked}>
+                        <img src={smily} alt="example1" className = "buyexmp"/>
+                    </button> 
+                        <div className="iteminfotab">
+                            <p>
+                                Item: Electric Kettle just bought 
+                            </p>   
+                            <p>
+                                Sold by: Harshita Fogat
+                            </p>
+                            <p>
+                                Cost: Rs. 450
+                            </p>
+
+                        </div>
+                </div>
                 
-                <button>
-                    <img src={smily} alt="example1" className = "buyexmp"/>
-                    <p></p>
-                </button>
-                <button>
-                    <img src={smily} alt="example1" className = "buyexmp"/>
-                </button>
-                <button>
-                    <img src={smily} alt="example1" className = "buyexmp"/>
-                </button>
-                <button>
-                    <img src={smily} alt="example1" className = "buyexmp"/>
-                </button>
-                <button>
-                    <img src={smily} alt="example1" className = "buyexmp"/>
-                </button>
-                <button>
-                    <img src={smily} alt="example1" className = "buyexmp"/>
-                </button>
-                <button>
-                    <img src={smily} alt="example1" className = "buyexmp"/>
-                </button>   
-                <button>
-                    <img src={smily} alt="example1" className = "buyexmp"/>
-                </button>
-                <button>
-                    <img src={smily} alt="example1" className = "buyexmp"/>
+                <button >
+                    Go Back
                 </button>
 
             </div>

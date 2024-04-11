@@ -353,23 +353,45 @@ input {
 }
 
 .somename {
-  display: grid;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /*display: grid;
   grid-template-columns: repeat(auto-fit, minmax(750px, 1fr));
   grid-gap: 12px; /* Adjust spacing between items */
 }
 
 .iteminfotab {
-  display: flex; /* Use flexbox */
-  align-items: center; /* Align items vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
   margin-left: 10px;
+  margin-right: 10px;
+  height: 100px;
   background-color: white;
+  line-height: 0.5;
+  font-style: oblique;
+  padding: 5px;
+  flex-grow: 1; /* Allow the iteminfotab to grow and take up remaining space */
+  min-width: 0;
+  
+}
+
+.item-container {
+  display: flex; /* Each container will display as a block element, stacking them vertically */
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%; /* Add some space between each pair */
 }
 
 .buyexmp {
-  width: 70px; /* Set width instead of height */
-  height: auto; /* Auto height to maintain aspect ratio */
-  object-fit: contain; /* Ensure image fits within the container */
+ /*width: 70px; /* Set width instead of height */
+ /* height: auto; /* Auto height to maintain aspect ratio */
+  /*object-fit: contain; /* Ensure image fits within the container */
   cursor: pointer;
+  margin-left: auto;
+  height: 100px;
 }
 
 .iteminfotab p {

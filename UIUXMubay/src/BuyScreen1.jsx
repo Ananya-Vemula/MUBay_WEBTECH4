@@ -5,6 +5,7 @@ import MyAccountPic from './assets/MyAccountPic.png';
 import HeaderMapPointer from './assets/HeaderMapPointer.png';
 import MyLogoMUBay from './assets/MyLogoMUBay.png';
 import NotificationButton from './assets/NotificationButton.png';
+import { BrowserRouter as Router, Route, Link, ReactRouter} from 'react-router-dom';
 import pic1 from './assets/pic1.png';
 import pic2 from './assets/pic2.png';
 import pic3 from './assets/pic3.png';
@@ -23,6 +24,8 @@ export const BuyScreen1 = (props) => {
         props.onScreenSwitch('ObjectclickScreen');
 
     };
+
+      
 
     return(
 
@@ -119,6 +122,11 @@ export const BuyScreen1 = (props) => {
                 <text>
                     <h2>Option not avaibable? use search bar!</h2>
                 </text>
+
+                <button>
+                    Go back
+                    
+                </button>
             </div>
 
         </div>

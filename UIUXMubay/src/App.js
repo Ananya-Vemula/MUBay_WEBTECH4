@@ -6,6 +6,9 @@ import { SignUpScreen } from "./SignUpScreen";
 import HomeScreen from "./HomeScreen";
 import BuyScreen1 from "./BuyScreen1";
 import ObjectclickScreen from "./ObjectclickScreen";
+import MoreObjInfoScreen from "./MoreObjInfoScreen";
+import BuyerInfoForm from "./BuyerInfoForm";
+
 
 function App() {
   const [currForm, setCurrForm] = useState('SignIn');
@@ -17,17 +20,21 @@ function App() {
 
   return (
     <div className="App">
-      {currForm === "SignIn" ? (
-        <SignInScreen onFormSwitch={handleFormSwitch} />
-      ) : currForm === "SignUp" ? (
-        <SignUpScreen onFormSwitch={handleFormSwitch} />
-      ) : currForm === "HomeScreen" ? (
-        <HomeScreen onScreenSwitch={handleFormSwitch} />
-      ) : currForm === "BuyScreen1" ? (
-        <BuyScreen1 onScreenSwitch = {handleFormSwitch}/>
-      ) : currForm === "ObjectclickScreen"?(
-        <ObjectclickScreen/>
-      ): null}
+    {currForm === "SignIn" ? (
+      <SignInScreen onFormSwitch={handleFormSwitch} />
+    ) : currForm === "SignUp" ? (
+      <SignUpScreen onFormSwitch={handleFormSwitch} />
+    ) : currForm === "HomeScreen" ? (
+      <HomeScreen onScreenSwitch={handleFormSwitch} />
+    ) : currForm === "BuyScreen1" ? (
+      <BuyScreen1 onScreenSwitch={handleFormSwitch} />
+    ) : currForm === "ObjectclickScreen" ? (
+      <ObjectclickScreen onScreenSwitch={handleFormSwitch} />
+    ) : currForm === "MoreObjInfoScreen" ? (
+      <MoreObjInfoScreen onScreenSwitch={handleFormSwitch} />
+    ) : currForm === "BuyerInfoForm" ? (
+      <BuyerInfoForm />
+    ) : null}
     </div>
   );
 }

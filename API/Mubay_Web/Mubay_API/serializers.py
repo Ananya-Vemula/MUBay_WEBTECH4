@@ -34,4 +34,6 @@ class SellerInfoSerializer(serializers.ModelSerializer):
 class StudentInfoSerializer(serializers.ModelSerializer):
     class Meta:
         model = StudentInfo
-        fields = ['stud_registration_no','stud_name','stud_outlook_mail','stud_password','stud_confirm_password','stud_phone_no']
+        fields = ['stud_registration_no', 'stud_name', 'stud_outlook_mail', 'stud_phone_no']
+
+    
